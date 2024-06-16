@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avanzada de la Ley de Ohm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de la Ley de Ohm</h1>
+        <div class="input-group">
+            <label for="voltage">Voltaje (V):</label>
+            <input type="number" id="voltage" placeholder="Ingrese Voltaje">
+            <button class="info-btn" onclick="toggleInfo('infoVoltage')">?</button>
+            <div class="info-popup" id="infoVoltage">El voltaje (V) es la diferencia de potencial eléctrico entre dos puntos de un circuito. Se mide en voltios (V) y representa la fuerza o presión que impulsa la corriente eléctrica a través de un conductor.</div>
+        </div>
+        <div class="input-group">
+            <label for="current">Corriente (I):</label>
+            <input type="number" id="current" placeholder="Ingrese Corriente">
+            <button class="info-btn" onclick="toggleInfo('infoCurrent')">?</button>
+           
+            <div class="info-popup" id="infoCurrent">La corriente (I) es el flujo de carga eléctrica por unidad de tiempo. Se mide en amperios (A) y representa la cantidad de carga que fluye a través de un punto en un circuito en un segundo.</div>
+        </div>
+        <div class="input-group">
+            <label for="resistance">Resistencia (R):</label>
+            <input type="number" id="resistance" placeholder="Ingrese Resistencia">
+            <button class="info-btn" onclick="toggleInfo('infoResistance')">?</button>
+            <div class="info-popup" id="infoResistance">La resistencia (R) es la oposición que presenta un material al paso de la corriente eléctrica. Se mide en ohmios (Ω) y depende de la longitud, área de la sección transversal y resistividad del material.</div>
+        </div>
+        <div class="button-group">
+            <button id="calculateBtn" onclick="calcular()">Calcular</button>
+            <button id="resetBtn" onclick="resetear()">Restablecer</button>
+        </div>
+        <div class="graph-container">
+            <canvas id="ohmGraph"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
